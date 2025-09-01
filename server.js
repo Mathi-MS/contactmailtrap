@@ -70,7 +70,7 @@ app.post("/api/contact", async (req, res) => {
       from: process.env.INBOX_FROM || process.env.SMTP_USER,           // sender identity
       to: process.env.INBOX_TO,                                       // your inbox
       replyTo: `"${String(name).trim()}" <${String(email).trim()}>`,  // so you can reply directly
-      subject: `Contact Form: ${String(name).trim()}`,
+      subject: `Kidz Montessori Academy - Contact Form: ${String(name).trim()}`,
       text: `Name: ${name}\nEmail: ${email}\nContact: ${contact}\n\nMessage:\n${message}`,
       html,
     });
